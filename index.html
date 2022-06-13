@@ -2,103 +2,6 @@
 <head>
     <title>♥</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script>
-    var counter = 0;
-    function onLoad() {
-        setTimeout(function () {
-            document.querySelector('.nextButton').style.display= 'inline-block';
-        }, 75000);
-        // 75000
-        // var mediaElem = document.getElementById("my_audio");
-        // mediaElem.load();
-    }
-
-
-
-    function changePage() {
-
-        document.getElementById('renderFrame').setAttribute('src', './PageFour/index.html'); 
-        document.querySelector('.nextButton').style.display= 'none';        
-                
-        document.querySelector('.nextButton2').style.display= 'none';    
-               
-        document.querySelector('.backButton1').style.display = 'none';       
-        document.querySelector('.backButton2').style.display = 'none';       
-        setTimeout(function () {
-            document.querySelector('.nextButton1').style.display= 'inline-block';
-            document.querySelector('.backButton').style.display = 'inline-block';
-        }, 4000);
-    }
-
-    function changePageThree() {
-        
-        document.getElementById('renderFrame').setAttribute('src', './PageThree/index.html');
-
-        document.querySelector('.backButton').style.display = 'none';        
-              
-        document.querySelector('.backButton2').style.display = 'none';       
-        document.querySelector('.nextButton').style.display= 'none';        
-        document.querySelector('.nextButton1').style.display= 'none';        
-        setTimeout(function () {
-            document.querySelector('.backButton1').style.display = 'inline-block'; 
-            document.querySelector('.nextButton2').style.display= 'inline-block';
-        }, 17000);
-    }
-
-    function changePageFour() {
-        document.getElementById('renderFrame').setAttribute('src', './PageTwo/index.html');
-        document.querySelector('.backButton').style.display = 'none';              
-        document.querySelector('.backButton1').style.display = 'none';        
-        document.querySelector('.nextButton').style.display= 'none';        
-        document.querySelector('.nextButton1').style.display= 'none';        
-        document.querySelector('.nextButton2').style.display= 'none';
-
-        setTimeout(function () {
-            document.querySelector('.backButton2').style.display = 'inline-block';
-        }, 360000);
-    }
-
-    function changePageTwoToOne() {
-        document.getElementById('renderFrame').setAttribute('src', './PageOne/index.html');        
-        
-        document.querySelector('.backButton').style.display = 'none';              
-        document.querySelector('.backButton1').style.display = 'none';       
-        document.querySelector('.backButton2').style.display = 'none';
-        document.querySelector('.nextButton1').style.display= 'none';        
-        document.querySelector('.nextButton2').style.display= 'none'; 
-        setTimeout(function () {
-            document.querySelector('.nextButton').style.display= 'inline-block';
-        }, 75000);   
-    }
-
-    function changePageThreeToTwo() {
-        document.getElementById('renderFrame').setAttribute('src', './PageFour/index.html');        
-        document.querySelector('.nextButton').style.display= 'none';
-                     
-        document.querySelector('.backButton1').style.display = 'none';       
-        document.querySelector('.backButton2').style.display = 'none';
-               
-        document.querySelector('.nextButton2').style.display= 'none';
-        setTimeout(function () {
-            document.querySelector('.backButton').style.display = 'inline-block'; 
-            document.querySelector('.nextButton1').style.display= 'inline-block'; 
-        }, 4000);
-    }
-
-    function changePageFourToThree() {
-        document.getElementById('renderFrame').setAttribute('src', './PageThree/index.html');        
-        document.querySelector('.nextButton').style.display= 'none';
-        document.querySelector('.backButton').style.display = 'none';                     
-        document.querySelector('.backButton2').style.display = 'none';
-        document.querySelector('.nextButton1').style.display= 'none';        
-
-        setTimeout(function () {
-            document.querySelector('.nextButton2').style.display= 'inline-block';
-            document.querySelector('.backButton1').style.display = 'inline-block';
-        }, 17000);
-    }
-
-    </script>
     <style>
     .nextButton, .backButton, .nextButton1, .nextButton2, .backButton1, .backButton2{
         z-index:9999; 
@@ -157,14 +60,6 @@
 </head>
 <html>
     <body onload="onLoad();"> 
-        
-        <button id="nextPage" class="nextButton" onclick="changePage()">Next</button>
-        <button id="nextPage1" class="nextButton1" onclick="changePageThree()">Next</button>
-        <button id="nextPage2" class="nextButton2" onclick="changePageFour()">Next</button>
-        <button id="backPage" class="backButton" onclick="changePageTwoToOne()">Back</button>
-        <button id="backPage1" class="backButton1" onclick="changePageThreeToTwo()">Back</button>
-        <button id="backPage2" class="backButton2" onclick="changePageFourToThree()">Back</button>
-
         <iframe 
             id="renderFrame"
             src="./PageOne/index.html" 
