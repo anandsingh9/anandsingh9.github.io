@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/png" href="image/love.ico">
+    <title>♥</title>	    
+    <link type="text/css" rel="stylesheet" href="./js/default.css">
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#my_audio").attr("src", "./g1.ogg");
+        });
+    </script>
+    <style>
+        .container { 
+        height: 100vh;
+        position: relative;
+        }
+
+        .center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <audio id="my_audio" autoplay="autoplay" loop="loop">
+        <source class="song" src="./g1.ogg" type="audio/ogg" />
+    </audio>
+<div class="container">
+  <a class="center" id="button" href='../PageTwo/index.html' target='_self'>
+    <img src="./heart.png" class="preview img1" />
+    <div class="center">
+        <b style="font-size: -webkit-xxx-large; color: red;">Open</b>
+    </div>
+</a>
+</div>
+
+</body>
+</html>
